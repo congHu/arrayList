@@ -108,7 +108,7 @@ T arrList<T> :: getValue(int p){        //  返回位置p的元素值
         return aList[p];
     }else{
         cout<<"Array index out of range.\n";
-        return 0;
+        return NULL;
     }
 }
 template <class T>
@@ -118,7 +118,7 @@ T arrList<T> :: setValue(int p, T value){
         return aList[p];
     }else{
         cout<<"Array index out of range.\n";
-        return 0;
+        return NULL;
     }
 }
 
