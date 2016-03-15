@@ -40,6 +40,8 @@ public: 						// 顺序表的运算集
             return false;
         }
     }
+    T getValue(int p);			 	//  返回位置p的元素值
+    T setValue(int p, T value);
 };  
  
 template <class T>  					// 假定顺序表的元素类型为T
@@ -99,5 +101,24 @@ bool arrList<T> :: append(T value){
     aList[curLen] = value;
     curLen++;
     return true;
+}
+template <class T>
+T arrList<T> :: getValue(int p){        //  返回位置p的元素值
+    if (p>=0&&p<curLen) {
+        return aList[p];
+    }else{
+        cout<<"Array index out of range.\n";
+        return 0;
+    }
+}
+template <class T>
+T arrList<T> :: setValue(int p, T value){
+    if (p>=0&&p<curLen) {
+        aList[p] = value;
+        return aList[p];
+    }else{
+        cout<<"Array index out of range.\n";
+        return 0;
+    }
 }
 
